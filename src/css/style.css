@@ -36,7 +36,7 @@
     @apply text-4xl;
   }
   .icon {
-    @apply w-6 h-6 p-2 mr-3 rounded-full flex justify-center items-center border border-black hover:bg-primary hover:text-white lg:w-11 lg:h-11 lg:p-0;
+    @apply w-9 h-9 md:w-6 md:h-6 p-2 mr-3 rounded-full flex justify-center items-center border border-black hover:bg-primary hover:text-white lg:w-11 lg:h-11 lg:p-0;
   }
 
   .icon svg{
