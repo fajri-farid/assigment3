@@ -44,6 +44,10 @@
   }
 }
 
+:required{
+  @apply bg-transparent;
+}
+
 .navbarfixed {
   @apply fixed z-[9999] bg-navbar text-white transition duration-200 ease-in-out;
   backdrop-filter: blur(5px);

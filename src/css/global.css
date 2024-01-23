@@ -1093,6 +1093,10 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+:required {
+  background-color: transparent;
+}
+
 .navbarfixed {
   position: fixed;
   z-index: 9999;

@@ -51,10 +51,7 @@ document.body.append(myCanvass);
 
 confettiBtn.addEventListener("click", () => {
   confettiBtn.addEventListener("click", () => {
-    // Assuming there is a form with the ID "myForm"
     const myForm = document.getElementById("myForm");
-  
-    // Check if the form is valid before displaying confetti
     if (myForm.checkValidity()) {
       const myConfetti = confetti.create(myCanvass, {
         resize: true,
@@ -66,7 +63,6 @@ confettiBtn.addEventListener("click", () => {
         spread: 160,
       });
     } else {
-      // Form is not valid, you can add any error handling here
       alert("Please fill in the form correctly.");
     }
   });
