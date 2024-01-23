@@ -36,3 +36,38 @@ const typed = new Typed("#element", {
   backDelay: 2000,
   loop: true,
 });
+
+// confetti
+import confetti from "canvas-confetti";
+
+const confettiBtn = document.getElementById("confetti");
+const myCanvass = document.createElement("canvas");
+myCanvass.style.width = "100vw";
+myCanvass.style.height = "100vh";
+myCanvass.style.position = "fixed";
+myCanvass.style.inset = 0;
+myCanvass.style.zIndex = -10;
+document.body.append(myCanvass);
+
+confettiBtn.addEventListener("click", () => {
+  confettiBtn.addEventListener("click", () => {
+    // Assuming there is a form with the ID "myForm"
+    const myForm = document.getElementById("myForm");
+  
+    // Check if the form is valid before displaying confetti
+    if (myForm.checkValidity()) {
+      const myConfetti = confetti.create(myCanvass, {
+        resize: true,
+        useWorker: true,
+      });
+  
+      myConfetti({
+        particleCount: 100,
+        spread: 160,
+      });
+    } else {
+      // Form is not valid, you can add any error handling here
+      alert("Please fill in the form correctly.");
+    }
+  });
+});
